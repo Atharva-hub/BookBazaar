@@ -3,10 +3,17 @@ import books from '../data/books.js'
 import '../css/book.css'
 import {CartContext} from '../context/CartContext'
 import { useContext } from 'react'
-
+import{useState} from 'react'
 const Book = () => {
 
   const {dispatch} = useContext(CartContext);
+  const [search, setSearch] = useState('')
+
+  const filteredbooks = books.filter((book) => 
+    {
+      return book.title.toLowerCase().includes(search.toLowerCase())
+    }
+  )
 
   const addToCart = (book) => {
     dispatch({type:"ADD_TO_CART",payload:book});
@@ -15,9 +22,17 @@ const Book = () => {
 
   return (
     <>
+    <div className="col-12">
+      <input type="text"
+        className="form-control mb-4"
+        placeholder="Search for books..."
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
 
     <div className="row">
-      {books.map((book) => (
+      {filteredbooks.map((book) => (
         <div className="col-md-6 col-lg-3 mb-4" key={book.id}>
           
           <div className="book-card">
