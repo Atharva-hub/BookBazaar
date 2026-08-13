@@ -30,7 +30,7 @@ const Book = () => {
                 className="book-image"
               />
 
-              <button className="wishlist-btn">
+              <button className="wishlist-btn" onClick={() => dispatch({type:"ADD_TO_WISHLIST",payload:book})}>
                 ❤️
               </button>
             </div>

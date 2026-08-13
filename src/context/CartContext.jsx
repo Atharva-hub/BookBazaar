@@ -5,6 +5,7 @@ export const CartContext = createContext();
 
 const initialState = {
     cart: [],
+    wishlist:[],
 };
 
 const cartReducer =(state,action) =>{
@@ -52,6 +53,36 @@ const cartReducer =(state,action) =>{
                                 (book) => book.id !== action.payload
                             ),
                         }
+
+                case "ADD_TO_WISHLIST":
+                    {
+                        const alreadyExists = state.wishlist.some(
+                        (book) => book.id = action.payload.id
+                    );
+                    
+                    if(alreadyExists){
+                        return state;
+                    }
+
+                    return{
+                        ...state,
+                        wishlist:[...state.wishlist, action.payload],
+                    };
+
+                    }
+                
+                case "REMOVE_FROM_WISHLIST":
+                    return{
+                        ...state,
+                        wishlist:state.wishlist.filter(
+                            (book) => book.id !== action.payload
+                        ),
+                    }
+                        
+                     
+                    
+
+
                 default:
                     return state;        
 
