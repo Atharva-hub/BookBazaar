@@ -57,7 +57,7 @@ const cartReducer =(state,action) =>{
                 case "ADD_TO_WISHLIST":
                     {
                         const alreadyExists = state.wishlist.some(
-                        (book) => book.id = action.payload.id
+                        (book) => book.id === action.payload.id
                     );
                     
                     if(alreadyExists){
