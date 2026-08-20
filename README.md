@@ -1,16 +1,111 @@
-# React + Vite
+# BookBazaar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+BookBazaar is a modern bookstore-themed e-commerce frontend built with React and Vite. It lets users browse featured books, explore categories, add items to a shopping cart, and save favorites in a wishlist.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Book catalog with trending bestsellers
+- Category browsing for fiction, self-help, finance, and programming
+- Add to cart with quantity controls
+- Wishlist support for saving favorite books
+- About page and bookstore landing experience
+- Responsive layout using Bootstrap styling
+- Theme support through React context
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- React Router
+- Bootstrap 5
+- JavaScript
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18 or later
+- npm
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <your-repository-url>
+   cd BookBazaar
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open the local URL shown in the terminal, usually:
+   ```bash
+   http://localhost:5173
+   ```
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+Starts the Vite development server.
+
+```bash
+npm run build
+```
+Creates a production build.
+
+```bash
+npm run preview
+```
+Serves the production build locally.
+
+```bash
+npm run lint
+```
+Runs ESLint checks on the project.
+
+## Project Structure
+
+```text
+BookBazaar/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── context/
+│   ├── css/
+│   ├── data/
+│   ├── images/
+│   ├── pages/
+│   ├── App.css
+│   ├── App.jsx
+│   ├── index.css
+│   └── main.jsx
+├── eslint.config.js
+├── index.html
+├── package.json
+├── vite.config.js
+├── README.md
+└── .gitignore
+```
+
+## Main Pages
+
+- Home: landing page with categories and featured books
+- Book: catalog page for browsing books
+- Cart: shopping cart with quantity updates
+- Wishlist: saved favorite items
+- About: bookstore information page
+
+
+## License
+
+This project is for educational purposes and is not currently licensed for commercial distribution.
