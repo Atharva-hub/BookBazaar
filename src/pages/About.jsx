@@ -1,7 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { useEffect } from 'react';
 const About = () => {
+
+
+    useEffect(() => {
+        document.title = "About";
+    }, []);
+    
   return (
     <div className="container py-5">
    

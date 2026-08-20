@@ -1,9 +1,15 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext,useEffect } from 'react';
 import books from '../data/books.js';
 import '../css/book.css';
 import { CartContext } from '../context/CartContext';
 
+
 const Book = () => {
+
+  useEffect(() => {
+      document.title = "Books";
+  }, []);
+
   const { dispatch } = useContext(CartContext);
   const [search, setSearch] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('All');

@@ -1,8 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext.jsx";
 
+
 const Cart = () => {
+
+  useEffect(() => {
+      document.title = "Cart";
+  }, []);
+
   const { state, dispatch } = useContext(CartContext);
 
   const increment = (id) => {

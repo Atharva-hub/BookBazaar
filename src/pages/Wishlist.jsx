@@ -1,8 +1,13 @@
-import React, { useContext } from "react";
+import React, { useContext,useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../context/CartContext";
 
 const Wishlist = () => {
+
+       useEffect(() => {
+           document.title = "Wishlist";
+       }, []);
+
   const { state, dispatch } = useContext(CartContext);
 
   const moveToCart = (book) => {

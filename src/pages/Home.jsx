@@ -3,8 +3,15 @@ import { Link } from 'react-router-dom';
 import books from '../data/books.js';
 import { CartContext } from '../context/CartContext.jsx';
 import '../css/book.css';
+import { useEffect } from 'react';
 
 const Home = () => {
+
+
+  useEffect(() => {
+      document.title = "Home";
+  }, []);
+
   const { dispatch } = useContext(CartContext);
 
 
