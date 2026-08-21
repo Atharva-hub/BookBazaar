@@ -2,6 +2,8 @@
 
 BookBazaar is a modern bookstore-themed e-commerce frontend built with React and Vite. It lets users browse featured books, explore categories, add items to a shopping cart, and save favorites in a wishlist.
 
+Live demo: https://bookbazzar-ruddy.vercel.app
+
 ## Features
 
 - Book catalog with trending bestsellers
