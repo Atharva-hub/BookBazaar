@@ -8,22 +8,22 @@ const Nav = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
   const location = useLocation();
 
-  // Calculate total items in cart and wishlist
+
   const cartCount = state.cart.reduce((sum, item) => sum + item.quantity, 0);
   const wishlistCount = state.wishlist.length;
 
-  // Helper function to check active nav link
+
   const isActive = (path) => location.pathname === path ? 'active fw-bold' : '';
 
   return (
     <nav className={`navbar navbar-expand-lg sticky-top border-bottom shadow-sm ${theme === 'dark' ? 'navbar-dark bg-dark' : 'navbar-light bg-white'}`}>
       <div className="container">
-        {/* Brand Logo & Name */}
+
         <Link className="navbar-brand d-flex align-items-center fw-bold fs-4 text-primary" to="/">
           <span className="me-2 fs-3">📚</span> BookBazaar
         </Link>
 
-        {/* Mobile Hamburger Toggle Button */}
+
         <button 
           className="navbar-toggler" 
           type="button" 
@@ -50,9 +50,8 @@ const Nav = () => {
             </li>
           </ul>
 
-          {/* Action Buttons: Cart, Wishlist, Theme Toggle */}
           <div className="d-flex align-items-center gap-2">
-            {/* Wishlist Link */}
+
             <Link to="/wishlist" className="btn btn-outline-danger position-relative rounded-pill px-3">
               ❤️ Wishlist
               {wishlistCount > 0 && (
@@ -62,7 +61,7 @@ const Nav = () => {
               )}
             </Link>
 
-            {/* Cart Link */}
+
             <Link to="/cart" className="btn btn-outline-primary position-relative rounded-pill px-3">
               🛒 Cart
               {cartCount > 0 && (
@@ -72,7 +71,6 @@ const Nav = () => {
               )}
             </Link>
 
-            {/* Dark/Light Mode Toggle Button */}
             <button 
               className={`btn ${theme === 'light' ? 'btn-dark' : 'btn-warning text-dark'} rounded-pill px-3 fw-medium ms-lg-2`}
               onClick={toggleTheme}
