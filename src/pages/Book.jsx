@@ -108,7 +108,7 @@ const Book = () => {
           {filteredBooks.map((book) => (
             <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={book.id}>
               <div className="book-card">
-                {/* Image Section */}
+
                 <div className="book-image-container">
                   <img
                     src={book.image}
@@ -124,7 +124,7 @@ const Book = () => {
                   </button>
                 </div>
 
-                {/* Content Section */}
+
                 <div className="book-content">
                   <span className="badge bg-secondary-subtle text-secondary align-self-start mb-2">
                     {book.category}

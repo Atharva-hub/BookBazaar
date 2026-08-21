@@ -55,7 +55,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter Subscription */}
+
           <div className="col-lg-4 col-md-6">
             <h5 className="fw-bold mb-3">Subscribe to Newsletter</h5>
             <p className="text-muted small mb-3">

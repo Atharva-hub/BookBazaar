@@ -51,7 +51,7 @@ const Home = () => {
       </section>
 
       <div className="container">
-        {/* 2. CATEGORIES SECTION */}
+
         <section className="mb-5">
           <div className="d-flex justify-content-between align-items-center mb-4">
             <h2 className="fw-bold m-0">Explore Categories</h2>
@@ -91,7 +91,7 @@ const Home = () => {
             {featuredBooks.map((book) => (
               <div className="col-12 col-sm-6 col-md-4 col-lg-3" key={book.id}>
                 <div className="book-card">
-                  {/* Book Image */}
+
                   <div className="book-image-container">
                     <img src={book.image} alt={book.title} className="book-image" />
                     <button 

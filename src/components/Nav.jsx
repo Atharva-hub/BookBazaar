@@ -50,7 +50,7 @@ const Nav = () => {
             </li>
           </ul>
 
-          <div className="d-flex align-items-center gap-2">
+          <div className="d-flex align-items-center gap-2 flex-wrap">
 
             <Link to="/wishlist" className="btn btn-outline-danger position-relative rounded-pill px-3">
               ❤️ Wishlist
@@ -71,8 +71,16 @@ const Nav = () => {
               )}
             </Link>
 
+            <Link to="/login" className={`btn ${location.pathname === '/login' ? 'btn-primary' : 'btn-outline-primary'} rounded-pill px-3 fw-medium`}>
+              🔑 Login
+            </Link>
+
+            <Link to="/signup" className={`btn ${location.pathname === '/signup' ? 'btn-success' : 'btn-outline-success'} rounded-pill px-3 fw-medium`}>
+              ✨ Signup
+            </Link>
+
             <button 
-              className={`btn ${theme === 'light' ? 'btn-dark' : 'btn-warning text-dark'} rounded-pill px-3 fw-medium ms-lg-2`}
+              className={`btn ${theme === 'light' ? 'btn-dark' : 'btn-warning text-dark'} rounded-pill px-3 fw-medium ms-lg-1`}
               onClick={toggleTheme}
               title="Toggle Dark/Light Mode"
             >

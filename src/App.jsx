@@ -8,6 +8,8 @@ import Home from './pages/Home'
 import Book from './pages/Book'
 import Cart from './pages/Cart'
 import Wishlist from './pages/Wishlist'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 import CartProvider from './context/CartContext'
 import ThemeProvider from './context/ThemeContext'
 import ErrorBoundary from './components/ErrorBoundary.jsx'
@@ -26,6 +28,8 @@ function App() {
                 <Route path='/book' element={<ErrorBoundary><Book /></ErrorBoundary>} />
                 <Route path='/cart' element={<ErrorBoundary><Cart /></ErrorBoundary>} />
                 <Route path='/wishlist' element={<ErrorBoundary><Wishlist /></ErrorBoundary>} />
+                <Route path='/login' element={<ErrorBoundary><Login /></ErrorBoundary>} />
+                <Route path='/signup' element={<ErrorBoundary><Signup /></ErrorBoundary>} />
                 <Route path='*' element={<ErrorBoundary><NotFound /></ErrorBoundary>} />
               </Routes>
             </main>
