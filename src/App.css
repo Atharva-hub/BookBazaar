@@ -1,0 +1,61 @@
+:root {
+	--auth-primary: #0d6efd;
+	--auth-primary-strong: #0b5ed7;
+	--auth-success: #198754;
+	--auth-success-strong: #157347;
+	--auth-border: rgba(13, 110, 253, 0.32);
+}
+
+.auth-btn {
+	border-radius: 999px;
+	font-weight: 600;
+	letter-spacing: 0.01em;
+	padding: 0.45rem 1rem;
+	min-width: 102px;
+	text-align: center;
+	transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.auth-btn:hover {
+	transform: translateY(-1px);
+}
+
+.auth-btn:focus-visible {
+	outline: none;
+	box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2);
+}
+
+.auth-btn-login {
+	color: var(--auth-primary);
+	border: 1px solid var(--auth-border);
+	background: #ffffff;
+}
+
+.auth-btn-login:hover,
+.auth-btn-login-active {
+	color: #ffffff;
+	border-color: var(--auth-primary);
+	background: linear-gradient(180deg, var(--auth-primary), var(--auth-primary-strong));
+	box-shadow: 0 8px 18px rgba(13, 110, 253, 0.28);
+}
+
+.auth-btn-signup {
+	color: var(--auth-success);
+	border: 1px solid rgba(25, 135, 84, 0.36);
+	background: #ffffff;
+	box-shadow: none;
+}
+
+.auth-btn-signup:hover,
+.auth-btn-signup-active {
+	color: #ffffff;
+	border-color: transparent;
+	background: linear-gradient(180deg, #1fa968, #157347);
+	box-shadow: 0 10px 20px rgba(25, 135, 84, 0.3);
+}
+
+@media (max-width: 991.98px) {
+	.auth-btn {
+		min-width: 112px;
+	}
+}

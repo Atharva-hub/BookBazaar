@@ -71,12 +71,18 @@ const Nav = () => {
               )}
             </Link>
 
-            <Link to="/login" className={`btn ${location.pathname === '/login' ? 'btn-primary' : 'btn-outline-primary'} rounded-pill px-3 fw-medium`}>
-              🔑 Login
+            <Link
+              to="/login"
+              className={`btn auth-btn auth-btn-login ${location.pathname === '/login' ? 'auth-btn-login-active' : ''}`}
+            >
+              Login
             </Link>
 
-            <Link to="/signup" className={`btn ${location.pathname === '/signup' ? 'btn-success' : 'btn-outline-success'} rounded-pill px-3 fw-medium`}>
-              ✨ Signup
+            <Link
+              to="/signup"
+              className={`btn auth-btn auth-btn-signup ${location.pathname === '/signup' ? 'auth-btn-signup-active' : ''}`}
+            >
+              Sign Up
             </Link>
 
             <button 
